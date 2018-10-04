@@ -5,12 +5,14 @@ class NumStack:
         self.ostack = list()
         self.hstack = list()
         self.lstack = list()
+        self.total = float()
 
     def push(self, v):
         h_i, l_i = False, False
         if not isinstance(v, (int, float, long)):
             raise ValueError("Can only push int, float, or long.")
         self.ostack.append(v)
+        self.total += v
         if len(self.hstack) == 0:
             self.hstack.append(v)
             h_i = True
@@ -42,7 +44,7 @@ class NumStack:
         return self.lstack[len(self.lstack) - 1]
 
     def avg(self):
-        return sum(self.ostack) / float(self.size())
+        return self.total / float(self.size())
 
 
 n = NumStack()
