@@ -1,4 +1,4 @@
-import unittest
+# import unittest
 
 
 class NumStack:
@@ -10,7 +10,7 @@ class NumStack:
 
     def push(self, v):
         h_i, l_i = False, False
-        if not isinstance(v, (int, float, long)):
+        if not isinstance(v, (int, float, float)):
             raise ValueError("Can only push int, float, or long.")
         self.ostack.append(v)
         self.total += v
@@ -48,25 +48,25 @@ class NumStack:
         return self.total / float(self.size())
 
 
-class NumStackTest(unittest.TestCase):
-    def test_push_pop(self):
-        n1 = NumStack()
-        n1.push(42.0)
-        self.assertEquals(n1.pop(), 42.0, "Didn't pop what we pushed")
+# class NumStackTest(unittest.TestCase):
+#     def test_push_pop(self):
+#         n1 = NumStack()
+#         n1.push(42.0)
+#         self.assertEquals(n1.pop(), 42.0, "Didn't pop what we pushed")
+#
+#     def test_avg(self):
+#         n2 = NumStack()
+#         n2.push(10)
+#         n2.push(14)
+#         n2.push(20)
+#         n2.push(11)
+#         n2.push(8)
+#         self.assertEqual(n2.avg(), 12.6, "Average was wrong")
 
-    def test_avg(self):
-        n2 = NumStack()
-        n2.push(10)
-        n2.push(14)
-        n2.push(20)
-        n2.push(11)
-        n2.push(8)
-        self.assertEqual(n2.avg(), 12.6, "Average was wrong")
 
-
-unittest.main()
-
-exit()
+# unittest.main()
+#
+# exit()
 
 
 n = NumStack()
@@ -78,14 +78,14 @@ n.push(1)
 n.push(3)
 n.push(3)
 
-print "Length : {}\nMin : {}\nMax : {}\nAvg : {}".format(n.size(), n.min(), n.max(), n.avg())
+print("Length : {}\nMin : {}\nMax : {}\nAvg : {}".format(n.size(), n.min(), n.max(), n.avg()))
 
-print "Pop : {}".format(n.pop())
-print "Pop : {}".format(n.pop())
-print "Pop : {}".format(n.pop())
+print("Pop : {}".format(n.pop()))
+print("Pop : {}".format(n.pop()))
+print("Pop : {}".format(n.pop()))
 
 n.push(-4)
 
 
-print "Max : {}".format(n.max())
-print "Min : {}".format(n.min())
+print("Max : {}".format(n.max()))
+print("Min : {}".format(n.min()))

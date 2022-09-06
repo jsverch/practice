@@ -58,38 +58,38 @@ class LRUCache(object):
 # Your LRUCache object will be instantiated and called as such:
 obj = LRUCache(2)
 
-print "C:{} : U:{}".format(obj.cache, obj.used)
-print obj.get(2)
-print "C:{} : U:{}".format(obj.cache, obj.used)
+print("C:{} : U:{}".format(obj.cache, obj.used))
+print(obj.get(2))
+print("C:{} : U:{}".format(obj.cache, obj.used))
 obj.put(2,6)
-print "C:{} : U:{}".format(obj.cache, obj.used)
-print obj.get(1)
-print "C:{} : U:{}".format(obj.cache, obj.used)
+print("C:{} : U:{}".format(obj.cache, obj.used))
+print(obj.get(1))
+print("C:{} : U:{}".format(obj.cache, obj.used))
 obj.put(1,5)
-print "C:{} : U:{}".format(obj.cache, obj.used)
+print("C:{} : U:{}".format(obj.cache, obj.used))
 obj.put(1,2)
-print "C:{} : U:{}".format(obj.cache, obj.used)
-print obj.get(1)
-print "C:{} : U:{}".format(obj.cache, obj.used)
-print obj.get(2)
-print "C:{} : U:{}".format(obj.cache, obj.used)
+print("C:{} : U:{}".format(obj.cache, obj.used))
+print(obj.get(1))
+print("C:{} : U:{}".format(obj.cache, obj.used))
+print(obj.get(2))
+print("C:{} : U:{}".format(obj.cache, obj.used))
 
 
 exit()
-
-obj.put(1, 1)
-print obj.cache
-obj.put(2, 2)
-print obj.cache
-
-print obj.get(1)
-obj.put(3, 3)
-print obj.cache
-
-print obj.get(2)
-obj.put(4, 4)
-print obj.cache
-
-print obj.get(1)
-print obj.get(3)
-print obj.get(4)
+#
+# obj.put(1, 1)
+# print obj.cache
+# obj.put(2, 2)
+# print obj.cache
+#
+# print obj.get(1)
+# obj.put(3, 3)
+# print obj.cache
+#
+# print obj.get(2)
+# obj.put(4, 4)
+# print obj.cache
+#
+# print obj.get(1)
+# print obj.get(3)
+# print obj.get(4)
